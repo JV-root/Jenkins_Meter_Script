@@ -28,7 +28,7 @@
       </Arguments>
       <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
-        <stringProp name="HTTPSampler.domain">54.243.35.245</stringProp>
+        <stringProp name="HTTPSampler.domain">${__P(host,10.169.0.10.1)}</stringProp>
         <stringProp name="HTTPSampler.port">9080</stringProp>
         <stringProp name="HTTPSampler.protocol">http</stringProp>
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variáveis Definidas Pelo Usuário">
