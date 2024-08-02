@@ -3169,7 +3169,7 @@
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
-        <stringProp name="ThreadGroup.num_threads">${__P(threads,5)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threads,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampup,1)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(duration,60)}</stringProp>
         <stringProp name="ThreadGroup.delay">${__P(delay,0)}</stringProp>
@@ -3182,7 +3182,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1.0 - Home" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1.0 - Home"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1.1 - GET - /easytravel/home" enabled="true">
             <stringProp name="HTTPSampler.contentEncoding">ISO-8859-1</stringProp>
@@ -3354,7 +3354,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="2.0 - Sign Up" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="2.0 - Sign Up" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2.1 - GET - /easytravel/signup" enabled="true">
             <stringProp name="HTTPSampler.path">/easytravel/signup</stringProp>
@@ -3479,9 +3479,9 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="3.0 - Login Page" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="2.0 - Login Page"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.1 - GET - /easytravel/login" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2.1 - GET - /easytravel/login">
             <stringProp name="HTTPSampler.path">/easytravel/login</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -3530,7 +3530,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.2 - POST - /easytravel/rest/login" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2.2 - POST - /easytravel/rest/login">
             <stringProp name="HTTPSampler.path">/easytravel/rest/login</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3597,9 +3597,9 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="4.0 - Booking" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="3.0 - Booking"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4.1 - GET - /easytravel/rest/journeys/recommendation">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.1 - GET - /easytravel/rest/journeys/recommendation">
             <stringProp name="HTTPSampler.path">/easytravel/rest/journeys/recommendation</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -3652,7 +3652,7 @@
             </JSONPostProcessor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4.2 - GET - /easytravel/rest/journeys/">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.2 - GET - /easytravel/rest/journeys/">
             <stringProp name="HTTPSampler.path">/easytravel/rest/journeys/${JourneyID}</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -3693,7 +3693,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4.3 - POST - /easytravel/rest/validate-creditcard">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.3 - POST - /easytravel/rest/validate-creditcard">
             <stringProp name="HTTPSampler.path">/easytravel/rest/validate-creditcard</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3750,7 +3750,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4.4 - POST - /easytravel/rest/bookings/">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3.4 - POST - /easytravel/rest/bookings/">
             <stringProp name="HTTPSampler.path">/easytravel/rest/bookings/</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3850,7 +3850,7 @@
         <stringProp name="filename">AGG_Output_${__time(MM-dd-yyyy_HH-mm-ss)}.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -3897,7 +3897,7 @@
             </elementProp>
             <elementProp name="influxdbUrl" elementType="Argument">
               <stringProp name="Argument.name">influxdbUrl</stringProp>
-              <stringProp name="Argument.value">http://${__P(host,18.233.49.236)}:8086/write?db=jmeter</stringProp>
+              <stringProp name="Argument.value">http://${__P(host,44.223.146.74)}:8086/write?db=jmeter</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="application" elementType="Argument">
